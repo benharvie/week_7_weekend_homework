@@ -22,6 +22,7 @@ CryptoListView.prototype.parseData = function (cryptoObj) {
 };
 
 CryptoListView.prototype.populate = function (info) {
+  this.element.innerHTML = ''
   info.forEach(crypto => {
     const cryptoView = new CryptoView(this.element, crypto);
     cryptoView.render();

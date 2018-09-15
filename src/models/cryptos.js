@@ -14,6 +14,7 @@ Cryptos.prototype.bindEvents = function () {
     .catch((err) => { // on error
       console.error(err)
     });
+  setInterval(function(){ this.bindEvents(); }, 3000);
 };
 
 module.exports = Cryptos;

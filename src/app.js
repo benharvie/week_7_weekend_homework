@@ -8,4 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('body');
   const cryptoListView = new CryptoListView(container);
   cryptoListView.bindEvents();
+
+  setInterval(function(){ cryptos.bindEvents(); }, 3000);
 })
